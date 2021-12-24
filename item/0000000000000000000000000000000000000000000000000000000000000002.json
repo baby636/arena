@@ -1,0 +1,27 @@
+{
+    "name": "WIZARD",
+    "description": "MAZE-ARENA NFT - Into the unknown - MAZE Token Collectibles.",
+    "external_url": "https://mazetoken.github.io/arena",  
+    "image": "https://mazetoken.github.io/arena/img/2.png",
+    "animation_url": "https://mazetoken.github.io/arena/media/wizard.mp4",
+    "attributes": [
+      {
+        "trait_type": "Collection", 
+        "value": "MAZE-ARENA NFT"
+      },
+      {
+        "trait_type": "Level", 
+        "value": "Mystic"
+      },
+      {
+        "trait_type": "Generation",
+        "display_type": "number", 
+        "value": 1
+      },
+      {
+        "trait_type": "Token_id",
+        "display_type": "number", 
+        "value": 2
+      }
+    ]
+  }
