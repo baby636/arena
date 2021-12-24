@@ -23,7 +23,9 @@ Token id	Level		Character	Token supply
 10 		Solo		Savage		200
 ```
 
-### MetaMask settings. MetaMask does not fully support ERC155 yet. You may see "Unable to load Balance". It is because "balanceOfBatch" is not implemented, I guess. You may not be able to send ERC115 NFTs with MetaMask.
+_MetaMask does not fully support ERC155 yet. You may see "Unable to load Balance". It is because "balanceOfBatch" is not implemented, I guess. You may not be able to send ERC115 NFTs with MetaMask. You need to interact with a contract._
+
+MetaMask settings:
 
 _import token_
 
