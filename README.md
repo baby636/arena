@@ -6,7 +6,7 @@ MAZE-ARENA is (the first ?) collection of ERC1155 NFTs (semi-fungible tokens) on
 
 Read about [ERC1155](https://eips.ethereum.org/EIPS/eip-1155)
 
-![MazeArena](img/MazeArena512x411.jpg)
+![MazeArenaCollection](img/MazeArena512x411.jpg)
 
 ```
 Token id	Level		Character	Token supply		
@@ -24,6 +24,8 @@ Token id	Level		Character	Token supply
 ```
 
 _MetaMask does not fully support ERC155 yet. You may see "Unable to load Balance". It is because "balanceOfBatch" is not implemented, I guess. You may not be able to send ERC115 NFTs with MetaMask. You need to interact with a contract._
+
+_If everything is fine images are uploaded on IPFS_
 
 ### MetaMask settings:
 
@@ -50,4 +52,10 @@ MetaMask app:
 Browser:
 
 ![Architect-apng](img/architect-apng.png)
+
+------------------------------------------------------------------------------------
+
+[Telegram](https://t.me/mazetokens)
+
+MAZE_ARENA, 2021 by B_S_Z
 
