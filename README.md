@@ -25,7 +25,7 @@ Token id	Level		Character	Token supply
 
 _MetaMask does not fully support ERC155 yet. You may see "Unable to load Balance". It is because "balanceOfBatch" is not implemented, I guess. You may not be able to send ERC115 NFTs with MetaMask. You need to interact with a contract._
 
-MetaMask settings:
+### MetaMask settings:
 
 _import token_
 
@@ -40,4 +40,14 @@ _go to NFT tab - Import NFTs_
 Address: 0x7c0C2f18aeF4B0cC84D9E397aE47867aC04AEA19
 
 ID: ... (Token id)
+
+### Sample previev
+
+MetaMask app:
+
+![Architect](img/architect.png)
+
+Browser:
+
+![Architect-apng](img/architect-apng.png)
 
