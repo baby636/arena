@@ -6,7 +6,7 @@ MAZE-ARENA is (the first ?) collection of ERC1155 NFTs (semi-fungible tokens) on
 
 Read about [ERC1155](https://eips.ethereum.org/EIPS/eip-1155)
 
-![MazeArena](img/MazeArena480x385.jpg)
+![MazeArena](img/MazeArena512x411.jpg)
 
 ```
 Token id	Level		Character	Token supply		
@@ -41,7 +41,7 @@ Address: 0x7c0C2f18aeF4B0cC84D9E397aE47867aC04AEA19
 
 ID: ... (Token id)
 
-### Sample previev
+### Sample preview
 
 MetaMask app:
 
