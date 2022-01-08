@@ -23,9 +23,11 @@ Token id	Level		Character	Token supply
 10 		Solo		Savage		200
 ```
 
-_MetaMask does not fully support ERC155 yet. You may see "Unable to load Balance". It is because "balanceOfBatch" is not implemented, I guess. You may not be able to send ERC115 NFTs with MetaMask. You need to interact with a contract._
+_MetaMask does not fully support ERC155 yet. You may see "Unable to load Balance". It is because "balanceOfBatch" is not implemented, I guess. You may not be able to send ERC115 NFTs with MetaMask. You need to interact with a contract through anoter app._
 
-[MAZE-ARENA](https://oneclickdapp.com/koala-yes) - OneClickDapp - to interact with the contract.
+[MAZE-ARENA](https://oneclickdapp.com/koala-yes) - OneClickDapp - to interact with the contract, for example:
+
+- to send one of MAZE-ARENA tokens open this oneclickdapp link above and connect your wallet (MetaMask). Next tap on Write tab, tap on safeTransferFrom and paste your address in the FROM filed, paste address you want to send token to in TO field, paste token id in the ID field, paste amount (eg. 1) and paste 0x0000000000000000000000000000000000000000000000000000000000000000 in the DATA field. Tap submit and approve transaction
 
 _If everything is fine images (and media) are uploaded on IPFS_
 
