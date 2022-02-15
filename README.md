@@ -1,15 +1,13 @@
-## MAZE-ARENA NFT - Into the unknown - [MAZE Token](https://mazetoken.github.io) Collectibles.
+## MAZE-ARENA NFT - Into the unknown - [MAZE Token](https://mazetoken.github.io)
+
+MAZE-ARENA NFT is a multi NFT contract (ERC1155) on Bitcoin Cash SmartBCH
 
 Contract address: 0x7c0C2f18aeF4B0cC84D9E397aE47867aC04AEA19
 
-MAZE-ARENA is (the first ?) collection of ERC1155 NFTs (semi-fungible tokens) on Bitcoin Cash SmartBCH network.
-
-Read about [ERC1155](https://eips.ethereum.org/EIPS/eip-1155)
-
-![MazeArenaCollection](img/MazeArena512x411.jpg)
+![MAZE-ARENA NFT Collection](img/MazeArena512x411.jpg)
 
 ```
-Token id	Level		Character	Token supply		
+Token id	Level		Character	Initial token supply		
 
 1	 	Legendary	Architect	20
 2 		Mystic		Wizard		40
@@ -23,15 +21,21 @@ Token id	Level		Character	Token supply
 10 		Solo		Savage		200
 ```
 
-_MetaMask does not fully support ERC155 yet. You may see "Unable to load Balance". It is because "balanceOfBatch" is not implemented, I guess. You may not be able to send ERC115 NFTs with MetaMask. You need to interact with a contract through anoter app._
+_MetaMask does not fully support ERC155 yet. You may see "Unable to load Balance". It is because "balanceOfBatch" is not implemented, I guess. You may not be able to send ERC1115 NFTs with MetaMask. You need to interact with a contract through another app or use ARENA Checker._
 
-[MAZE-ARENA](https://oneclickdapp.com/koala-yes) - OneClickDapp - to interact with the contract, for example:
+### MAZE-ARENA NFT Checker
+
+[ARENA Checker](https://mazetoken.github.io/arena/checker) - view and send your ERC1155 NFTs (desktop or mobile)
+
+[MAZE-ARENA NFT](https://oneclickdapp.com/koala-yes) - OneClickDapp - to interact with the contract, e.g.:
 
 - to send one of MAZE-ARENA tokens open this oneclickdapp link above and connect your wallet (MetaMask). Next tap on Write tab, tap on safeTransferFrom and paste your address in the FROM filed, paste address you want to send token to in TO field, paste token id in the ID field, paste amount (eg. 1) and paste 0x0000000000000000000000000000000000000000000000000000000000000000 in the DATA field. Tap submit and approve transaction
 
-_If everything is fine images (and media) are uploaded on IPFS_
+_If everything is fine images (and media) are uploaded to IPFS_
 
 ### MetaMask settings:
+
+connect to SmartBCH network
 
 _import token_
 
@@ -62,6 +66,4 @@ Browser:
 ------------------------------------------------------------------------------------
 
 [Telegram](https://t.me/mazetokens)
-
-MAZE_ARENA, 2021 by B_S_Z
 
