@@ -3,10 +3,10 @@
   <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <meta name="description" content="maze-arena, nft, maze token, bitcoin cash, bch, SmartBCH">
+    <meta name="description" content="arena nft checker, nft, maze-arena, maze token, bitcoin cash, bch, smartBCH">
     <meta name="web" content="https://mazetoken.github.io/arena">
-	<link rel="icon" type="image/ico" sizes="32x32" href="../img/favicon.ico">
-    <title>MAZE-ARENA NFT</title>
+	<link rel="icon" type="image/ico" sizes="32x32" href="img/favicon.ico">
+    <title>ARENA NFT Checker</title>
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous">
     <script src="https://cdn.jsdelivr.net/npm/jquery@3.6.0/dist/jquery.min.js" integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4=" crossorigin="anonymous"></script>
 	<script src="https://cdn.jsdelivr.net/npm/web3@1.6.1/dist/web3.min.js" integrity="sha256-XH+mnS1YTklQJ7VzeLSviplcaKwkRWpwDwHUNXVCuIU=" crossorigin="anonymous"></script>
@@ -20,230 +20,72 @@
 
 	<script src="switch.js"></script>
 
-    <h1 style="text-align:center">MAZE-ARENA NFT</h1>
-	<p style="text-align:center">Multi NFT contract on Bitcoin Cash SmartBCH</p>
+    <h1 style="text-align:center">ARENA NFT Checker</h1>
+	<p style="text-align:center">on Bitcoin Cash <a href="https://smartbch.org">smartBCH</a><br>
+		<img src="img/smartbch150.png" alt="SmartBCH" width="150" height="56">
+	</p>
 	<br>
 
 	<div class="row" style="text-align:center">
 		<div>
-		<h3 class="sub-header">ARENA NFT Checker - view your ERC1155 NFTs</h3><br>
-		<input id="tokenId" type="text" size="10" placeholder="token ID"><br><br>
-		<button onclick="viewNFT1()" class="btn-sm btn-secondary">View MAZE-ARENA NFT</button> | <button onclick="viewNFT2()" class="btn-sm btn-secondary">View Yoshi NFT Series</button>
+		<h3 class="sub-header">View and send ERC1155 tokens</h3>
+		<p style="text-align:center">Non-fungible and (semi) fungible tokens in a single contract<br>
+			You must have MetaMask wallet configured for SmartBCH (Bitcoin Cash side-chain)<br><a href="faq.html">ARENA NFT Checker FAQ</a>
+		</p>
+		<br>
+		<input id="tokenId" type="text" size="10" placeholder="token ID">
+		<p></p>
+		Featured tokens: <button onclick="viewNFT1()" class="btn-sm btn-secondary">View MAZE-ARENA NFT</button> | <button onclick="viewNFT2()" class="btn-sm btn-secondary">View Yoshi NFT Series</button>
+		<p></p>
+		Custom tokens: <input id="custom" type="text" size="40" placeholder="contract address"> <input id="customURI" type="text" size="40" placeholder="base image URI e.g. https://ipfs.io/ipfs/Qm.../"> <button onclick="viewNFT3()" class="btn-sm btn-secondary">View custom NFT</button><br>
+		<p></p>
+		<p style="text-align:center"><img src="img/allarena.png" alt="MAZE-ARENA NFT" width="200"> <img src="img/allyoshi.png" alt="Yoshi NFT Series" width="200"></p>
 		</div>
     </div>
+
+	<hr>
+	<div class="row" style="text-align:center">
+		<div id="lang">
+		</div>	
+	</div>
 	<br>
+	<hr>
 
 	<div class="row" style="text-align:center">
 		<div>
-		<h3 class="sub-header">ARENA NFT Checker - send your ERC1155 NFTs</h3><br>
+		<h3 class="sub-header">Send ERC1155 tokens</h3>
 		<input id="to" type="text" size="40" placeholder="address to"><br>
 		<input id="tokenId" type="text" size="10" placeholder="token ID"><br>
 		<input id="amount" type="text" size="10" placeholder="amount"><br><br>
 		<button onclick="sendNFT1()" class="btn-sm btn-secondary">Send MAZE-ARENA NFT</button> | <button onclick="sendNFT2()" class="btn-sm btn-secondary">Send Yoshi NFT</button>
 		</div>
     </div>
-
-	<div class="row" style="text-align:center">
-		<div id="lang">
-		</div>	
-	</div>
-	<p></p>
-
-	<script>
-        ethereum.enable();
-		web3 = new Web3(window.ethereum);
-		ethereum.request({ method: 'eth_requestAccounts' });
-			var zombieMaster;
-			const getAccount = async () => {
-				try {
-				const myAccounts = await web3.eth.getAccounts();
-				zombieMaster = myAccounts[0];
-				console.log("Master account" + zombieMaster);
-				return myAccounts[0];
-				} catch (err) {
-					console.log(err);
-				}
-			}
-		getAccount();
-		web3.eth.defaultAccount = web3.eth.accounts[0];
-    </script>
-
-	<script>
-	var abi = [
-	{
-		"inputs": [
-			{
-				"internalType": "address",
-				"name": "account",
-				"type": "address"
-			},
-			{
-				"internalType": "uint256",
-				"name": "id",
-				"type": "uint256"
-			}
-		],
-		"name": "balanceOf",
-		"outputs": [
-			{
-				"internalType": "uint256",
-				"name": "",
-				"type": "uint256"
-			}
-		],
-		"stateMutability": "view",
-		"type": "function"
-	},
-	{
-		"inputs": [
-			{
-				"internalType": "address",
-				"name": "from",
-				"type": "address"
-			},
-			{
-				"internalType": "address",
-				"name": "to",
-				"type": "address"
-			},
-			{
-				"internalType": "uint256",
-				"name": "id",
-				"type": "uint256"
-			},
-			{
-				"internalType": "uint256",
-				"name": "amount",
-				"type": "uint256"
-			},
-			{
-				"internalType": "bytes",
-				"name": "data",
-				"type": "bytes"
-			}
-		],
-		"name": "safeTransferFrom",
-		"outputs": [],
-		"stateMutability": "nonpayable",
-		"type": "function"
-	}
-	];
-	var arenacontractAddress = '0x7c0C2f18aeF4B0cC84D9E397aE47867aC04AEA19';
-	var yoshicontractAddress = '0x8ebf51b3435F232ED08cE5Fb2491B6eA21826f94';
-	var contract1 = new web3.eth.Contract(abi, arenacontractAddress);
-	var contract2 = new web3.eth.Contract(abi, yoshicontractAddress);
-	</script>
-
-	<script>
-		function viewNFT1() {
-		// if not connected reload page
-		if (!zombieMaster) location.reload(true);
-		var tokenId = $("#tokenId").val();
-		var content = "<br>NFT image and balance of address: ";
-		content += zombieMaster;
-		$("#lang").html(content);
-		var event = contract1.methods.balanceOf(zombieMaster, tokenId).call()
-			.then(function (result) {
-		var content = "<br>Your balance of this token ID is: ";
-			console.log(result);
-		content += JSON.stringify(result.toString());
-		content += "<br><img src=https://mazetoken.github.io/arena/img/"+tokenId+".png width=366 height=366><br>";
-		$("#lang").html(content);
-			});;
-		};
-	</script>
-
-	<script>
-		function viewNFT2() {
-		// if not connected reload page
-		if (!zombieMaster) location.reload(true);
-		var tokenId = $("#tokenId").val();
-		var content = "<br>NFT image and balance of address: ";
-		content += zombieMaster;
-		$("#lang").html(content);
-		var event = contract2.methods.balanceOf(zombieMaster, tokenId).call()
-			.then(function (result) {
-		var content = "<br>Your balance of this token ID is: ";
-			console.log(result);
-		content += JSON.stringify(result.toString());
-		content += "<br><img src=https://ipfs.io/ipfs/QmUkL8535iXAXfrUUWBE7iEyvjRiWGJYkNoPVVdugkAvEw/"+tokenId+".png width=366 height=366><br>";
-		$("#lang").html(content);
-			});;
-		};
-	</script>
-
-	<script>
-		function sendNFT1() {
-		// if not connected reload page
-		if (!zombieMaster) location.reload(true);
-		var to = $("#to").val();
-		var tokenId = $("#tokenId").val();
-		var amount = $("#amount").val();
-		var data = '0x0000000000000000000000000000000000000000000000000000000000000000';
-		var content = "<br>Sending from address: ";
-		content += zombieMaster;
-		$("#lang").html(content);
-		var event = contract1.methods.safeTransferFrom(zombieMaster, to, tokenId, amount, data).send({ from: zombieMaster, gasPrice: 1047000000 })
-			.then(function (receipt) {
-		var content = "<br>Sending transaction...";
-			console.log(receipt);
-		var content = "<br>Transaction sent!";
-		content += JSON.stringify(receipt.transactionHash);
-		$("#lang").html(content);
-			});;
-		};
-	</script>
-
-	<script>
-		function sendNFT2() {
-		// if not connected reload page
-		if (!zombieMaster) location.reload(true);
-		var to = $("#to").val();
-		var tokenId = $("#tokenId").val();
-		var amount = $("#amount").val();
-		var data = '0x0000000000000000000000000000000000000000000000000000000000000000';
-		var content = "<br>Sending from address: ";
-		content += zombieMaster;
-		$("#lang").html(content);
-		var event = contract2.methods.safeTransferFrom(zombieMaster, to, tokenId, amount, data).send({ from: zombieMaster, gasPrice: 1047000000 })
-			.then(function (receipt) {
-		var content = "<br>Sending transaction...";
-			console.log(receipt);
-		var content = "<br>Transaction sent!";
-		content += JSON.stringify(receipt.transactionHash);
-		$("#lang").html(content);
-			});;
-		};
-	</script>
-
-	<hr>
-	<h2 style="text-align:center"></h2>
-	<p>
-	</p>
-	<p style="text-align:center">You must have MetaMask wallet configured for SmartBCH (Bitcoin Cash side-chain).<br>
-       Refresh the page if it is not connected to MetaMask.<br>
-	   You may need to double-click buttons.<br>
-	   It may take a few seconds for an NFT image to upload from IPFS.<br><br>
-	   Other features are coming soon.
-	</p>
-	
-	<hr>
-    <p></p><br>
-	<p>MAZE-ARENA NFT contract address: 0x7c0C2f18aeF4B0cC84D9E397aE47867aC04AEA19<br>
-	About <a href="https://mazetoken.github.io/arena">MAZE-ARENA NFT</a><br>
-	MAZE-ARENA <a href="https://github.com/mazetoken/arena/blob/main/contracts/MazeArena.sol">contract</a> (ERC1155)<br>
-    MAZE-ARENA on <a href="https://www.smartscan.cash/address/0x7c0C2f18aeF4B0cC84D9E397aE47867aC04AEA19">SmartScan</a> explorer</p>
-	<p></p><br>
-
-    <p>Donation for Arena ;-)<br>
-    BCH: bitcoincash:qz85j4w64z7n3vjfztwdhnstv7w98yztksmfwd4vu0<br>
-    BCH/SEP20 (SmartBCH): 0x346A5A5B5Ba9C61081294e8Bd98e30b7F6078b67<br>
-    SLP: simpleledger:qz85j4w64z7n3vjfztwdhnstv7w98yztkshj9kqvz3
-	</p>
 	<br>
 
-	<p style="text-align:center"><a href="https://t.me/mazetokens"><img src="../img/telegram.png" alt="Telegram" width="32" height="32"></a>
-	<a href="https://mazetoken.github.io"><img src="../img/maze200.png" alt="MAZE" width="32" height="32"></a></p>
+	<div class="row" style="text-align:center">
+		<div>
+		<h3 class="sub-header">Buy ERC1155 tokens</h3> - coming soon<br>
+		</div>
+    </div>
+	<br>
+
+	<div class="row" style="text-align:center">
+		<div>
+		<h3 class="sub-header">ERC1155 Faucet</h3> - coming soon<br>
+		</div>
+    </div>
+	<br>
+
+	<script src="web3.js"></script>
+
+	<script src="abi.js"></script>
+
+	<script src="functions.js"></script>
+	
+    <p></p><br>
+	<p style="text-align:center">MAZE Tokens Underworld 2020-2022<br>
+	<a href="https://t.me/mazetokens"><img src="img/telegram.png" alt="Telegram" width="32" height="32"></a>
+	<a href="https://mazetoken.github.io"><img src="img/maze512.png" alt="MAZE" width="32" height="32"></a></p>
 	<br>
 
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p" crossorigin="anonymous"></script>
