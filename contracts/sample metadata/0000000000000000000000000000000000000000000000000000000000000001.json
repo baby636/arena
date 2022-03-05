@@ -1,0 +1,27 @@
+{
+    "name": "ARCHITECT",
+    "description": "MAZE-ARENA NFT - Into the unknown.",
+    "external_url": "https://mazetoken.github.io/arena",  
+    "image": "https://gateway.pinata.cloud/ipfs/QmZeteXbTGea6tpoNGnfoFPYP7u9PenJdWoQgZZeGSN34k/1.png",
+    "animation_url": "",
+    "attributes": [
+      {
+        "trait_type": "Collection", 
+        "value": "MAZE-ARENA NFT"
+      },
+      {
+        "trait_type": "Level", 
+        "value": "Legendary"
+      },
+      {
+        "trait_type": "Generation",
+        "display_type": "number", 
+        "value": 1
+      },
+      {
+        "trait_type": "tokenId",
+        "display_type": "number", 
+        "value": 1
+      }
+    ]
+  }

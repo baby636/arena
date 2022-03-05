@@ -11,7 +11,7 @@
     var content = "<br>Your balance of this token ID is: ";
         console.log(result);
     content += JSON.stringify(result.toString());
-    content += "<br><img src=https://mazetoken.github.io/arena/img/"+tokenId+".png width=366 height=366><br>";
+    content += "<br><img src=https://gateway.pinata.cloud/ipfs/QmUgcW7NWjDMAdWjPMAA3NTDEEu2h59QdAe2TDqdthiU6f/"+tokenId+".png width=366><br>";
     $("#lang").html(content);
         });;
     };
@@ -29,7 +29,7 @@
     var content = "<br>Your balance of this token ID is: ";
         console.log(result);
     content += JSON.stringify(result.toString());
-    content += "<br><img src=https://ipfs.io/ipfs/QmUkL8535iXAXfrUUWBE7iEyvjRiWGJYkNoPVVdugkAvEw/"+tokenId+".png width=366 height=366><br>";
+    content += "<br><img src=https://ipfs.io/ipfs/QmUkL8535iXAXfrUUWBE7iEyvjRiWGJYkNoPVVdugkAvEw/"+tokenId+".png width=366><br>";
     $("#lang").html(content);
         });;
     };
@@ -49,7 +49,7 @@
         var content = "<br>Your balance of this token ID is: ";
             console.log(result);
         content += JSON.stringify(result.toString());
-        content += "<br><img src="+custom2+""+tokenId+".png width=366<br>";
+        content += "<br><img src="+custom2+""+tokenId+".png width=366><br>";
         $("#lang").html(content);
             });;
         };

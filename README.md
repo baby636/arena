@@ -2,11 +2,11 @@
 
 MAZE-ARENA NFT is an experimental multi-token contract (non-fungible and fungible tokens - ERC1155). It is not a final version.
 
-Contract address: 0x7c0C2f18aeF4B0cC84D9E397aE47867aC04AEA19
-
 MAZE-ARENA NFT is (the first ?) collection of ERC1155 NFTs on Bitcoin Cash SmartBCH. Metadata and images are stored on IPFS.
 
-Read about [ERC1155](https://eips.ethereum.org/EIPS/eip-1155)
+Contract address: 0x7c0C2f18aeF4B0cC84D9E397aE47867aC04AEA19
+
+[Source code](contracts/MazeArena.sol)
 
 ![MAZE-ARENA NFTs](checker/img/allarena.png)
 
@@ -31,7 +31,6 @@ You can also use [MAZE-ARENA](https://oneclickdapp.com/koala-yes) - OneClickDapp
 
 - to send one of MAZE-ARENA tokens open this oneclickdapp link above and connect your wallet (MetaMask). Next tap on Write tab, tap on safeTransferFrom and paste your address in the FROM filed, paste address you want to send token to in TO field, paste token id in the ID field, paste amount (eg. 1) and paste 0x0000000000000000000000000000000000000000000000000000000000000000 in the DATA field. Tap submit and approve transaction
 
-_If everything is fine images (and media) are uploaded on IPFS_
 
 ### MetaMask settings:
 
@@ -51,6 +50,7 @@ ID: ... - paste Token id
 
 _You may need to tap "import" twice"_
 
+Read about [ERC1155](https://eips.ethereum.org/EIPS/eip-1155)
 
 ------------------------------------------------------------------------------------
 MAZE Tokens Underworld 2020-2022
