@@ -11,7 +11,7 @@
     var content = "<br>Your balance of this token ID is: ";
         console.log(result);
     content += JSON.stringify(result.toString());
-    content += "<br><img src=https://gateway.pinata.cloud/ipfs/QmZeteXbTGea6tpoNGnfoFPYP7u9PenJdWoQgZZeGSN34k/"+tokenId+".png width=366><br>";
+    content += "<br><img src=https://mazetoken.github.io/img/"+tokenId+".png width=366><br>";
     $("#lang").html(content);
         });;
     };

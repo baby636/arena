@@ -1,0 +1,26 @@
+{
+    "name": "GEARHEAD",
+    "description": "MAZE-ARENA NFT - Into the unknown",
+    "image": "https://mazetoken.github.io/arena/img/4.png",
+    "external_url": "https://mazetoken.github.io/arena",
+    "attributes": [
+      {
+        "trait_type": "Collection", 
+        "value": "MAZE-ARENA NFT"
+      },
+      {
+        "trait_type": "Level", 
+        "value": "Epic"
+      },
+      {
+        "trait_type": "Generation",
+        "display_type": "number", 
+        "value": 1
+      },
+      {
+        "trait_type": "tokenId",
+        "display_type": "number", 
+        "value": 4
+      }
+    ]
+  }
