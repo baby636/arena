@@ -1,8 +1,8 @@
 ## MAZE-ARENA NFT - Into the unknown
 
-MAZE-ARENA NFT is an experimental multi-token contract (non-fungible and fungible tokens - ERC1155). It is not a final version.
+MAZE-ARENA NFT is an experimental multi-token contract (non-fungible and fungible tokens - ERC1155).
 
-MAZE-ARENA NFT is (the first ?) collection of ERC1155 NFTs on Bitcoin Cash SmartBCH. Metadata and images are stored on IPFS.
+MAZE-ARENA NFT is (the first ?) collection of ERC1155 NFTs on Bitcoin Cash SmartBCH.
 
 Contract address: 0x7c0C2f18aeF4B0cC84D9E397aE47867aC04AEA19
 
